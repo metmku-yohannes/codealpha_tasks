@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <header>
+      <h1>MUSIC PLAYER </h1>
+      <label for="search-input">Search songs</label>
+      <input type="text" id="search-input" placeholder="Song / Artist">
+    </header>
+
+    <main>
+
+      <section>
+
+        <h2>NOW PLAYING</h2>
+
+        <img id="album-cover" src="fiyorina-cover.png" alt="Fiyorina album cover">
+
+        <p id="song-title">Fiyorina</p>
+        <p id="song-artist">Teddy Afro</p>
+        <label for="timeline">Song progress</label>
+        <input id="timeline" type="range" min="0" max="100" value="0" step="0.1">
+        <p id="current-time">0:00</p>
+        <p id="duration">0:00</p>
+        <div class="player-controls">
+          <button type="button" id="previous">⏮</button>
+          <button type="button" id="play-pause">▶</button>
+          <button type="button" id="next">⏭</button>
+        </div>
+        
+        <div class="volume-control">
+          <label for="volume" aria-label="Volume">🔊</label>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.5">
+        </div>
+        
+      </section>
+
+      <section>
+        <h2>PLAYLIST</h2>
+        <div>
+          <div class="playlist-header">
+            <h3>Song name</h3>
+            <h3>Artist </h3>
+            <h3>Play</h3>
+          </div>
+
+          <div class="song-row">
+            <p class="song-title">Fiyorina</p>
+            <p class="artist">Teddy Afro</p>
+            <button type="button" class="play-button">▶</button>
+          </div>
+
+          <div class="song-row">
+            <p class="song-title">Yane Leje Eyalen</p>
+            <p class="artist">Gosaye Tesfay</p>
+            <button type="button" class="play-button">▶</button>
+          </div>
+
+          <div class="song-row">
+            <p class="song-title">Kefitret Yegilish</p>
+            <p class="artist">Tadele Roba</p>
+            <button type="button" class="play-button">▶</button>
+          </div>
+
+          <p id="no-results" style="display: none;">
+            No songs found. Try another search.
+          </p>
+          
+        </div>
+        
+      </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
